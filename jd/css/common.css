@@ -1,0 +1,10 @@
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+body,html{height:100%;font-size:12px;font-family:"微软雅黑";}
+img,iframe{border:none}
+a{text-decoration:none;color:#333; font-size: 12px;cursor: pointer;}
+ul,li,ol{list-style:none}
+.clear{width:0;height:0;overflow:hidden;clear:both;}
