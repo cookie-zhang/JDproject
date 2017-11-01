@@ -333,9 +333,10 @@ body{
 }
 .search_input{
 	float: left;
-	width: 500px;
-	height:34px ;
+	width: 504px;
+	height:38px ;
 	outline: none;
+	border: none;
 }
 .sou_content{
 	width: 503px;
