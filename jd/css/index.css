@@ -43,7 +43,7 @@ body{
 /*nav public*/
 .jd_nav{
 	width: 100%;
-	height: 40px;
+	height: 37px;
 	float: left;
 	background: #e3e4e5;
 	float: left;
@@ -51,7 +51,439 @@ body{
 .jd_nav_main{
 	margin: 0 auto;
 	width: 1190px;
+	height: 37px;
+	background: #e3e4e5;
+}
+.city{
+	width: 70px;
+	height: 37px;
+	float: left;
+	margin-left: 200px;
+	background: #e3e4e5;
+	position: relative;
+}
+.allkind{
+	width: 40px;
+	height: 37px;
+	float: right;
+}
+.kindcity_box{
+	position: absolute;
+	width: 400px;
+	height: 270px;
+	background: #fff;
+	top:37px;
+	left: 0;
+	z-index: 22;
+	display: none;
+}
+.kindcity_box div{
+	float: left;
+	margin-left: 15px;
+	margin-top: 7px;
+	width: 60px;
+	padding:2px 0;
+	text-align: center;
+}
+.kindcity_box div a{
+	padding: 5px 8px;
+	width:40px;
+	text-align: center;
+	float: left;
+}
+
+.city_in{
+	background:#E01312;
+}
+
+
+.city span{
+	width: 70px;
 	height: 40px;
-	background: red;
+	float: left;
+	font-size: 12px;
+	line-height:37px;
+	text-align: center;
+	color: #999999;
+}
+.city:hover{
+	background: #fff;
+}
+.user_box{
+	width:120px;
+	height: 37px;
+	background:  #e3e4e5;
+	float: left;
+}
+.user_box li a{
+	float: right;
+	height: 37px;
+	text-align: center;
+	line-height: 37px;
+	margin-right: 5px;
+	color: red;
+}
+
+.jd_nav_right a:hover{
+	color:#c81623;
+}
+.jd_nav_right{
+	width: 770px;
+	height: 37px;
+	float: right;
+	
+}
+.jd_nav_right_ul{
+	width: 650px;
+	height: 37px;
+	float: right;
+	background: #e3e4e5;
+}
+.jd_nav_right_ul li{
+	float: left;
+	margin-left: 10px;
+	height: 37px;
+	font-size: 12px;
+	line-height: 37px;
+	color: #999999;
+}
+.jd_nav_right_ul li a{
+	height: 37px;
+	float: left;
+	line-height: 37px;
+	font-size: 12px;
+	color: #999999;
+}
+.jd_nav_right_ul li a:hover{
+	color: #C81623;
+}
+.shu{
+	font-size: 10px!important;
+	color: #ccc;
+}
+.posit{
+	padding: 0 4px 0 4px;
+}
+.posit:hover{
+	background: #fff;
+}
+.posit{
+	position: relative;
+}
+.my_jd{
+	width: 350px;
+	height: 200px;
+	top: 37px;
+	position: absolute;
+	left: 0;
+	background: #fff;
+	z-index: 22;
+	display: none;
+}
+.my_kehu{
+	width: 210px;
+	height: 300px;
+	position: absolute;
+	background: #fff;
+	top: 37px;
+	left: -138px;
+	display: none;
+	z-index: 22;
+}
+.my_nav{
+	width: 1190px;
+	height: 220px;
+	position: absolute;
+	left:-1020px ;
+	top: 37px;
+	background: #fff;
+	display: none;
+	z-index: 22;
+}
+.my_jd ul{
+	width: 100px;
+	height:190px;
+	float: left;
+	margin-left: 15px;
+}
+.kehu_box{
+	width: 210px;
+	height: 300px;
+	float: left;
+	
+	
+}
+.kehu_box ul{
+	width: 100px;
+	height: 150px;
+	
+	float: left;
+}
+.kehu_box_span{
+	margin-left: 10px;
+}
+.phone_jd{
+	position: relative;
+}
+.ma_jd{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	
+}
+.three{
+	width: 200px;
+	height: 305px;
+	position: absolute;
+	left: -130px;
+	z-index: 22;
+	background: #fff;
+	display: none;
+}
+.three_01{
+	width: 200px;
+	height: 100px;
+	border-bottom: 1px solid #ccc;
+}
+.three_03{
+	border-bottom: 2px solid #ccc;
+}
+.ma_red{
+	width: 70px;
+	height: 70px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.ma_red img{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.ma_red_right{
+	width: 120px;
+	height: 70px;
+	float: left;
+	margin-top: 10px;
+}
+.item{
+	width: 120px;
+	height: 20px;
+	float: left;
+}
+.my_blank img{
+	width: 60px;
+	height: 60px;
+}
+.my_blue img{
+	width: 60px;
+	height: 60px;
+}
+.item{
+	margin-left: 10px;
 }
 /*nav public*/
+
+
+
+
+
+/**logo**/
+.jd_logo{
+	width: 100%;
+	height: 178px;
+	float: left;
+}
+.jd_logo_main{
+	width: 1190px;
+	height: 178px;
+	margin: 0 auto;
+}
+.jd_dog{
+	width:190px;
+	height: 178px;
+	background: #fff;
+	float: left;
+	position: relative;
+}
+.jd_dog_img{
+	width: 190px;
+	height: 250px;
+	top: -37px;
+	position: absolute;
+}
+.jd_search_box{
+	width: 840px;
+	height: 100px;
+	float: left;
+	margin-left: 80px;
+}
+.jd_search_and_ul{
+	width: 560px;
+	height: 70px;
+	float: left;
+	margin-left: 70px;
+	margin-top: 30px;
+}
+.jd_search{
+	width: 558px;
+	height: 38px;
+	float: left;
+	position: relative;
+	border: 1px solid #F10215;
+}
+.search_input{
+	float: left;
+	width: 500px;
+	height:34px ;
+	outline: none;
+}
+.sou_content{
+	width: 503px;
+	background: #fff;
+	position: absolute;
+	top: 38px;
+	left: -1px;
+	border: 1px solid #ccc;
+}
+.jd_poto{
+	width: 25px;
+	height: 20px;
+	position: absolute;
+	background: url(../img/sprite-photo-search.png) no-repeat;
+	background-position: 0 0 ;
+	cursor: pointer;
+	z-index: 20;
+	right: 60px;
+	top: 10px;
+}
+.jd_poto:hover{
+	background-position: -30px 0;
+}
+.sousou{
+	width: 54px;
+	height: 38px;
+	float: right;
+	background: #F10215;
+	cursor: pointer;
+}
+.sousou span{
+	width: 54px;
+	height: 37px;
+	float: left;
+	color: #fff;
+	font-weight: 700;
+	font-size: 28px;
+	text-align: center;
+	line-height: 35px;
+}
+.search_ul{
+	width: 558px;
+	height:20px;
+	float: left;
+	margin-top: 3px;
+}
+.search_ul li{
+	float: left;
+	margin-top: 2px;
+}
+.search_ul li a{
+	margin-left: 11px;
+}
+.search_ul li:nth-child(1) a{
+	color: red;
+}
+
+.search_ul li a:hover{
+	color: #D72432;
+}
+/*********搜索****************/
+#ol1{
+	width: 500px;
+	border: 1px solid #ccc;
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 38px;
+	z-index: 11;
+}	
+.search_01 li{
+	list-style: none;
+	padding: 5px;
+	cursor: pointer;
+}
+.selected{
+	background:palevioletred;
+	color: white;
+}
+/******************************/
+
+
+
+
+
+.my_shopcar{
+	width: 180px;
+	height: 37px;
+	background: #fff;
+	float: right;
+	margin-right: 3px;
+	margin-top: 30px;
+}
+.zhongjian{
+	width: 100px;
+	height: 37px;
+	float: left;
+	margin-left: 40px;
+}
+.my_shopcar_che{
+	width:30px;
+	height: 37px;
+	float: left;
+	font-size: 20px!important;
+	text-align: center;
+	line-height: 37px;
+	color: #F10215;
+}
+.jiarugouwu{
+	width: 70px;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+	font-size: 14px;
+	margin-top: 5px;
+	color: #F10215;
+	position: relative;
+}
+.jd_number{
+	position: absolute;
+	width: 17px;
+	height: 17px;
+	background:#F10215 ;
+	border-radius: 50%;
+	left: 70px;
+	top: 0px;
+	text-align: center;
+	line-height: 17px;
+	color: #fff;
+}
+
+.jd_nav02_and_pinpai{
+	width: 1000px;
+	height: 55px;
+	margin-top: 20px;
+	float: left;
+}
+.jd_nav02{
+	width: 700px;
+	height: 48px;
+	float: left;
+	margin-top: 7px;
+	margin-left: 20px;
+	background: pink;
+}
+.pinpai{
+	width: 200px;
+	float: right;
+	margin-top: 10px;
+}
