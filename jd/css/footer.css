@@ -1,0 +1,131 @@
+.footer_box{
+	width: 100%;
+	height: 620px;
+	float: left;
+	margin-top: 30px;
+	background: #EAEAEA;
+}
+
+.footer_top01{
+	width: 100%;
+	margin: 0 auto;
+	height: 100px;
+}
+.footer_top01_ul{
+	width: 1190px;
+	height: 100px;
+	margin: 0 auto;
+}
+.footer_top01_ul li{
+	width: 250px;
+	height: 50px;
+	float: left;
+	margin-left: 32px;
+	margin-top: 30px;
+}
+.footer_top01_ul li i{
+	width: 36px;
+	height: 43px;
+	float: left;
+	margin-top: 5px;
+	background: url(../img/ico_service.png);
+	background-position: 0 0 ;
+}
+.footer_top01_ul li span{
+	font-size: 16px;
+	font-weight: 800;
+	float: left;
+	margin-left: 10px;
+	margin-top: 15px;
+	}
+.kuai{
+	background: url(../img/ico_service.png);
+	background-position: 0 -43px!important;
+}
+.hao{
+	background: url(../img/ico_service.png);
+	background-position: 0 -86px!important;
+}
+.sheng{
+	background: url(../img/ico_service.png);
+	background-position: 0 -129px!important;
+}
+
+.footer_top02{
+	width: 1190px;
+	height: 200px;
+	border-top:1px solid #ccc ;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.footer_top02_ul01{
+	width: 120px;
+	height: 180px;
+	float: left;
+	margin-left: 70px;
+}
+.footer_top02_ul01 h3{
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+.footer_top02_ul01 li{
+	margin-top: 5px;
+}
+.footer_top02_ul01 li a {
+	font-size: 14px;
+	padding-top: 10px;
+	margin-top: 10px;
+}
+.footer_top02_ul01 li a:hover{
+	color: red;
+}
+.footer_top03{
+	width: 1190px;
+	height: 40px;
+	margin: 0 auto;
+}
+.footer_top03 li{
+	float: left;
+	margin-left: 12px;
+}
+.footer_top03 li a:hover{
+	color: red;
+}
+
+.footer_top04{
+	width: 940px;
+	height: 85px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 30px;
+}
+.footer_top05{
+	width: 670px;
+	height: 50px;
+	margin:  0 auto;
+	margin-top: 10px;
+	
+}
+
+.footer_top05 a{
+	width: 105px;
+	height: 30px;
+	float: left;
+	background: url(../img/ico_footer.png);
+	background-position: 0 -150px!important;
+}
+.footer_top05 a:nth-child(2){
+	background-position: -107px -150px!important;
+}
+.footer_top05 a:nth-child(3){
+	background-position: -0px -185px!important;
+}
+.footer_top05 a:nth-child(4){
+	background-position: -100px -185px!important;
+}
+.footer_top05 a:nth-child(5){
+	background-position: 0px -220px!important;
+}
+.footer_top05 a:nth-child(6){
+	background-position: -104px -220px!important;
+}

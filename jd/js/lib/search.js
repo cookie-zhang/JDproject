@@ -72,3 +72,7 @@ function changeStyle(){
 function dianji(){
 	
 }
+
+input1.onfocus=function(){
+	this.value=" ";
+}
