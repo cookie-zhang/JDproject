@@ -3,63 +3,166 @@ $(function(){
 		$(this).parent().parent().fadeOut();
 	})
 	
-	//城市
-	$(".city").mouseenter(function(){
-		$(".kindcity_box").css({"display":"block"})
-	}).mouseleave(function(){
-		$(".kindcity_box").css({"display":"none"})
+
+	
+	
+		//头部分离  请求头部
+	$(".jd_nav").load("head.html .jd_nav_main",function(){
+		
+			//城市
+			$(".city").mouseenter(function(){
+				$(".kindcity_box").css({"display":"block","z-index":888})
+			}).mouseleave(function(){
+				$(".kindcity_box").css({"display":"none"})
+			})
+			
+			//ajax获取citys
+			$.ajax({
+				type:"get",
+				url:"data/city.json",
+				success:function(json){
+					var str = "";
+					for(var i = 0 ; i < json.length ; i++){
+						str+=`
+							<div class="ever_city"><a href="javascript:;">${json[i]}</a></div>
+						`	
+						
+					}
+					$(".kindcity_box").append(str)
+					$(".ever_city").eq(0).addClass("city_in")
+					//点击某一个城市，添加到上面，并改变样式
+					$(".kindcity_box").on("click",".ever_city",function(){
+						$(this).addClass("city_in").siblings().removeClass("city_in");
+						$(".allkind").html($(this).children().html())
+					})
+				}
+				
+			});
+			
+		
+			//我的京东
+			$(".my_jd_par").mouseenter(function(){
+				$(".my_jd").css({"display":"block","z-index":888})
+			}).mouseleave(function(){
+				$(".my_jd").css({"display":"none"})
+			})
+			//我的客服
+			$(".my_kehu_par").mouseenter(function(){
+				$(".my_kehu").css({"display":"block","z-index":888})
+			}).mouseleave(function(){
+				$(".my_kehu").css({"display":"none"})
+			})
+			//网页导航
+			$(".my_nav_par").mouseenter(function(){
+				$(".my_nav").css({"display":"block","z-index":888})
+			}).mouseleave(function(){
+				$(".my_nav").css({"display":"none"})
+			})
+			
+					//
+			$(".phone_jd").mouseenter(function(){
+				$(".three").css({"display":"block","z-index":888})
+			}).mouseleave(function(){
+				$(".three").css({"display":"none"})
+			})
+			
+
 	})
 	
-	//ajax获取citys
-	$.ajax({
-		type:"get",
-		url:"data/city.json",
-		success:function(json){
-			var str = "";
-			for(var i = 0 ; i < json.length ; i++){
-				str+=`
-					<div class="ever_city"><a href="javascript:;">${json[i]}</a></div>
-				`	
+	
+	$(".jd_logo").load("logo_search.html .logo_search_f",function(){
+		
 				
-			}
-			$(".kindcity_box").append(str)
-			$(".ever_city").eq(0).addClass("city_in")
-			//点击某一个城市，添加到上面，并改变样式
-			$(".kindcity_box").on("click",".ever_city",function(){
-				$(this).addClass("city_in").siblings().removeClass("city_in");
-				$(".allkind").html($(this).children().html())
-			})
+		/******搜索************/
+		/**
+		 * 搜索框
+		 * **/
+		function callback(obj){
+			ol1.innerHTML = "";
+			obj.s.forEach(function(v){
+				var li = document.createElement("li");
+				ol1.appendChild(li);
+				li.innerHTML = v;
+			});
 		}
 		
-	});
-	
-	//我的京东
-	$(".my_jd_par").mouseenter(function(){
-		$(".my_jd").css({"display":"block"})
-	}).mouseleave(function(){
-		$(".my_jd").css({"display":"none"})
+		function jsonp(url){
+			var script = document.createElement("script");
+			document.getElementsByTagName("head")[0].appendChild(script);
+			script.src = url;
+		}
+		
+		
+		var ind = -1, lis, len;
+		input1.onkeyup = function(e){
+			lis = ol1.getElementsByTagName("li");
+			len = lis.length;
+			e = e || window.event;
+			var code = e.which || e.keyCode;
+			switch( code ){
+				case 10:
+				case 13:
+					//window.open("https://www.baidu.com/s?wd="+this.value);
+					a1.href = "https://www.baidu.com/s?wd="+this.value;
+					a1.target = "_blank";
+					ol1.innerHTML = "";
+					this.value="";
+					a1.click();
+					break;
+				case 38://shang
+					ind--;
+					if(ind<=-1)ind=len-1;
+					changeStyle();
+					break;
+				case 40://xia
+					ind++;
+					if(ind>=len)ind=0;
+					changeStyle();
+					break;
+				default:
+					ind=-1;
+					var w = this.value;
+					if( w!="" ){
+						jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?cb=callback&wd="+w);
+					}else{
+						ol1.innerHTML = "";
+						
+					}
+			}
+		}
+		function changeStyle(){
+			Array.from(lis).forEach(function(li){
+				li.className = "";
+			});
+			lis[ind].className = "selected";
+			input1.value = lis[ind].innerText;
+		}
+		
+		//鼠标进入点击
+		function dianji(){
+			
+		}
+		
+		input1.onfocus=function(){
+			this.value=" ";
+		}
+
+		
+		
 	})
-	//我的客服
-	$(".my_kehu_par").mouseenter(function(){
-		$(".my_kehu").css({"display":"block"})
-	}).mouseleave(function(){
-		$(".my_kehu").css({"display":"none"})
-	})
-	//网页导航
-	$(".my_nav_par").mouseenter(function(){
-		$(".my_nav").css({"display":"block"})
-	}).mouseleave(function(){
-		$(".my_nav").css({"display":"none"})
-	})
 	
 	
-	//
-	$(".phone_jd").mouseenter(function(){
-		$(".three").css({"display":"block"})
-	}).mouseleave(function(){
-		$(".three").css({"display":"none"})
-	})
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	//menu
 	$(".jd_menu_ul li").mouseenter(function(){
 		$(this).children("div").css({"display":"block"})	            
@@ -205,9 +308,8 @@ $(function(){
 		$(".kill_lb02_ul").css({"left":-1000*i})
 	})
 	$(".kill_lb02_left").click(function(){
-		
 		i--;
-		if(i==0){
+		if(i<0){
 			i=3;
 		}
 		$(".kill_lb02_ul").css({"left":-1000*i})
@@ -463,76 +565,12 @@ $(function(){
 	
 	
 	
+	//头部分离  请求头部
+	$(".footer_box").load("foot.html .fot")
+	
+	
 	
 	//楼梯
-/*	
-var $lis = $("#LoutiNav ul li");
-var $divs = $(".jd_louti");
-
-
-
-var $ulTop = $("#LoutiNav ul").height();
-var $goTop = $(".last");
-$(window).scroll(function(){
-	
-	//兼容   然后拿到滚动条的高度
-	//var $sTop = document.body.scrollTop || document.documentElement.scrollTop;
-	
-	if($(document).scrollTop()>$ulTop){
-		$("#LoutiNav").show(1000)
-	}else{
-		$("#LoutiNav").hide(1000)
-	}
-
-
-	//可视窗口高度
-    var winH = $(window).height();
-    //鼠标滚动的距离
-    var iTop = $(window).scrollTop();
-
-
-	//根据滚动条滑动的高度找到对应的楼梯，高亮显示
-	$divs.each(function(){
-		if(winH + iTop - $(this).offset().top > winH / 2) {
-           	$lis.find("span").css({"display":"none"});
-            $lis.eq($(this).index()).find("span").css({"display":"block","background":"darkred","color":"#fff"});
-            
-        }
-	})
-	
-
-	
-})
-	//点击回到当前楼层
-	$lis.click(function(){
-		var t = $divs.eq($(this).index()).offset().top;
-		$("html,body").animate({
-			"scrollTop":t
-		},1000)
-		
-	})*/
-	
-	
-	
-	
-	/*
-	 1、点击 top  滚动条运动到 最顶端
-	 2、点击左侧的楼层号 出现对应的楼
-	 	如何出现 ：  控制页面滚走的距离  就是该楼层号对应的楼层的 top    
-	 3、触发滚动条，某个楼层在可视区的面积最大   控制对应的楼层号 变色
-	   如何找哪一个楼层在可视区面积最大 ：　　楼层的ｏｆｆｓｅｔＴｏｐ　－　页面滚走的距离　＜　　ｈ／２  	
-	 */
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	//回到顶端
 	$(".last").click(function(){
 		flag = false;
@@ -572,56 +610,29 @@ $(window).scroll(function(){
 			//可视窗口高度
    			 var winH = $(window).height();
    			 
+   			 //
+   			 if($(window).scrollTop()>2116){
+   			 	$("#LoutiNav").css("display","block")
+   			 }else{
+   			 	$("#LoutiNav").css("display","none")
+   			 }
+
+   			 
    			 
 			//通过 filter 方式 过滤 查找哪一个楼层 满足  ：  Math.abs(楼层的top - 页面滚走的距离) < 楼层高度/2
 			$floor = $(".jd_louti").filter(function(){
 				return  Math.abs( $(this).offset().top  - sTop) < $(this).height()/2;
 			})
-			
-			
-			
-			
-			
-			
-			
+
 			$(".jd_louti").each(function(){
-			if(winH + sTop - $(this).offset().top > winH / 2) {
+				if(winH + sTop - $(this).offset().top > winH / 2) {
 			
-			$("#LoutiNav li:not(:last)").eq($(this).index()).find("span").addClass("active").siblings().find("span").removeClass("active");
-											
-											
-											
+					$("#LoutiNav li:not(:last)").eq($(this).index()).find("span").addClass("active").siblings().find("span").removeClass("active");
+       			 }
+			})
 			
 		
-            
-        }
-	})
-			
-			
-			
-			
-			
-			
-			
-   			
-			
-			
-			//得到满足条件的楼层的下标
-			/*var index = $floor.index();*/
-			
-		/*	if( index != -1 ){//控制最后一个li （服务）的样式
-				alert()
-				//根据楼层的下标控制 楼层号的样式
-				$("#LoutiNav li:not(:last)").eq(index)
-											.find("span")
-											.addClass("active")
-											.end()
-											.siblings()
-											.find("span")
-											.removeClass("active");
-			}*/
 		}
-		
 	})
 	
 	
@@ -634,6 +645,18 @@ $(window).scroll(function(){
 	
 	
 	
+	//吸顶  吸低
+	$(window).scroll(function(){
+		if($(window).scrollTop()>400){
+			$(".xi_top_box").css({"display":"block"})
+			$(".jd_search").css({"position":"fixed","top":15,"z-index":120})
+			$(".footer_yincang_box").slideDown()
+		}else{
+			$(".jd_search").css({"position":"relative"});
+			$(".xi_top_box").css({"display":"none"})
+			$(".footer_yincang_box").slideUp()
+		}
+	})
 	
 	
 	
@@ -642,6 +665,42 @@ $(window).scroll(function(){
 	
 	
 	
+	
+	//侧边栏
+	var flag = true;
+	$(".cebian_pict").click(function(){
+		if(flag){
+			$(".jd_cebian_box").animate({"right":0})
+			flag=false;
+		}else{
+			flag=true;
+			$(".jd_cebian_box").animate({"right":"-280px"})
+		}
+	})
+	
+	
+	$(".clear_xxx").click(function(){
+		$(".jd_cebian_box").animate({"right":"-280px"})
+	})
+	
+	
+	$(".cebian_ul_box ul li a").mouseenter(function(){
+		
+		$(this).find("em").animate({"display":"block",  "width":"80px","left":"-70px"},200)
+	}).mouseleave(function(){
+		
+		$(this).find("em").animate({"display":"none", "width":"35px", "left":"0"},200)
+	})
+	
+	
+
+	$(".cebian_ol li a").mouseenter(function(){
+
+		$(this).find("em").animate({"display":"block",  "width":"80px","left":"-70px"},200)
+	}).mouseleave(function(){
+		
+		$(this).find("em").animate({"display":"none", "width":"35px", "left":"0"},200)
+	})
 	
 	
 	

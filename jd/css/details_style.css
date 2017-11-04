@@ -1,0 +1,231 @@
+.details_head{
+	width: 100%;
+	height: 37px;
+	background: #E3E4E5;
+}
+/**/
+
+.details_logo_search{
+	width: 100%;
+	height: 178px;
+}
+
+.deta_ipTop_box{
+	width: 100%;
+	height: 42px;
+	float: left;
+	background: #F2F2F2;
+}
+.deta_ipTop_main{
+	width: 1190px;
+	height: 42px;
+	margin: 0 auto;
+}
+.deta_ipTop_left{
+	width: 550px;
+	height: 30px;
+	float: left;
+	margin-top: 10px;
+}
+.deta_ipTop_left li{
+	float: left;
+	margin-top: 5px;
+	height: 25px;
+	text-align: center;
+	
+	color: #333333;
+}
+.jiantou{
+	margin-top: 10px;
+}
+.jianguo_pro{
+	width: 110px;
+	height: 20px;
+	background: #fff;
+	float: left;
+	margin-left: 5px;
+	border: 1px solid #536C52;
+	position: relative;
+	background: #fff;
+}
+.jianguo_pro i{
+	width: 20px;
+	height: 20px;
+	margin-top: 3px;
+}
+
+#img_jiao:hover{
+	
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); 	/* IE 9 */
+    -moz-transform:rotate(90deg); 	/* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg); 	/* Opera */
+	transition: 0.2s;
+}
+.allkid_chuizi{
+	width:830px;
+	height:180px;
+	position: absolute;
+	border: 1px solid #536C52;
+	left: -1px;
+	z-index: 0;
+	top: 20px;
+	float: left;
+	background: #fff;
+	display: none;
+	
+}
+.smart{
+	width:110px;
+	height: 20px;
+	background: #fff;
+	z-index: 22;
+	float: left;
+	left: 0;
+}
+
+.kidchui_01{
+	width: 250px;
+	height: 100px;
+	float: left;
+	margin-left: 20px;
+}
+.ppp{
+	width: 250px;
+	height: 100px;
+	float: left;
+}
+.ppp:hover{
+	color: red;
+}
+.img_01{
+	width: 70px;
+	height: 70px;
+	float: left;
+	margin-top: 15px;
+}
+._01_words{
+	width: 150px;
+	height: 40px;
+	float: left;
+	margin-top: 15px;
+	font-style: normal;
+}
+.shuoming_pro_ul{
+	width: 820px;
+	height: 70px;
+	float: left;
+}
+.shuoming_pro_ul li{
+	float: left;
+	
+}
+.shuoming_pro_ul li a{
+	padding: 20px 40px;
+}
+.pro_ol{
+	width: 510px;
+	height: 35px;
+	float: right;
+	margin-top: 5px;
+	position: relative;
+}
+.pro_ol li{
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.pro_ol li a {
+
+}
+.pro_ol li a i{
+	width: 15px;
+	height: 15px;
+	float: left;
+	
+}
+.i_01{
+	
+	
+}
+.i_03{
+	background: url(../img/__sprite.png);
+	background-position:-17px -19px ;
+}
+
+/***********放大镜主体详情*/
+.delis_glase_box{
+	width: 100%;
+	height: 750px;
+	float: left;
+}
+.delis_main{
+	width: 1190px;
+	height: 750px;
+	margin: 0 auto;
+	background: pink;
+}
+.delis_main_left{
+	width: 470px;
+	height: 750px;
+	float: left;
+}
+
+
+
+.Magnifier_box{
+	width: 450px;
+	height: 600px;
+	float: left;
+	position: relative;
+	left: 10px;
+	top: 10px;
+	border: 1px solid #F2F2F2;
+	background: darkblue;
+}
+.small{
+	width: 450px;
+	height: 450px;
+}
+.small img{
+	position: absolute;
+	top:0;
+	left:0;
+}
+#big{
+	width: 680px;
+	height: 680px;
+	border:1px solid #ccc;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left: 450px;
+}
+.bigImage{
+	position:absolute;
+	top:0;
+	left:0;
+}
+#small{
+	position:relative;
+	cursor:move;  
+}
+.Magnifier_box li{
+	
+    float: left;	 
+	border-top:none;
+
+}
+#box ul{
+            overflow: hidden;
+          /*  border-top:1px solid #ccc;*/
+			position:absolute;
+			top:450px;
+			left:0;
+			width:450px;
+}
+#bottom li{
+	width:85px;
+	margin-top:5px;
+}

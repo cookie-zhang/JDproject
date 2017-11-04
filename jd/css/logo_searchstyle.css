@@ -1,0 +1,238 @@
+
+/**logo**/
+.jd_logo{
+	width: 100%;
+	height: 178px;
+	float: left;
+}
+.jd_logo_main{
+	width: 1190px;
+	height: 178px;
+	margin: 0 auto;
+}
+.jd_dog{
+	width:190px;
+	height: 178px;
+	background: #fff;
+	float: left;
+	position: relative;
+}
+.jd_dog_img{
+	width: 190px;
+	height: 250px;
+	top: -37px;
+	position: absolute;
+}
+.jd_search_box{
+	width: 840px;
+	height: 100px;
+	float: left;
+	margin-left: 80px;
+	position: relative;
+}
+.jd_search_and_ul{
+	width: 560px;
+	height: 70px;
+	float: left;
+	margin-left: 70px;
+	margin-top: 30px;
+}
+.jd_search{
+	width: 558px;
+	height: 38px;
+	float: left;
+	position: relative;
+	border: 1px solid #F10215;
+}
+.search_input{
+	float: left;
+	width: 504px;
+	height:38px ;
+	outline: none;
+	border: none;
+}
+.sou_content{
+	width: 503px;
+	background: #fff;
+	position: absolute;
+	top: 38px;
+	left: -1px;
+	border: 1px solid #ccc;
+}
+.jd_poto{
+	width: 25px;
+	height: 20px;
+	position: absolute;
+	background: url(../img/sprite-photo-search.png) no-repeat;
+	background-position: 0 0 ;
+	cursor: pointer;
+	z-index: 20;
+	right: 60px;
+	top: 10px;
+}
+.jd_poto:hover{
+	background-position: -30px 0;
+}
+.sousou{
+	width: 54px;
+	height: 38px;
+	float: right;
+	background: #F10215;
+	cursor: pointer;
+}
+.sousou span{
+	width: 54px;
+	height: 37px;
+	float: left;
+	color: #fff;
+	font-weight: 700;
+	font-size: 28px;
+	text-align: center;
+	line-height: 35px;
+}
+.search_ul{
+	width: 558px;
+	height:20px;
+	float: left;
+	margin-top: 17px;
+}
+.search_ul li{
+	float: left;
+	margin-top: 2px;
+}
+.search_ul li a{
+	margin-left: 11px;
+}
+.search_ul li:nth-child(1) a{
+	color: red;
+}
+
+.search_ul li a:hover{
+	color: #D72432;
+}
+/*********搜索****************/
+#ol1{
+	width: 500px;
+	border: 1px solid #ccc;
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 38px;
+	z-index: 11;
+}	
+.search_01 li{
+	list-style: none;
+	padding: 5px;
+	cursor: pointer;
+}
+.selected{
+	background:palevioletred;
+	color: white;
+}
+/******************************/
+
+
+
+
+
+.my_shopcar{
+	width: 180px;
+	height: 37px;
+	background: #fff;
+	float: right;
+	margin-right: 3px;
+	margin-top: 30px;
+}
+.zhongjian{
+	width: 100px;
+	height: 37px;
+	float: left;
+	margin-left: 40px;
+}
+.my_shopcar_che{
+	width:30px;
+	height: 37px;
+	float: left;
+	font-size: 20px!important;
+	text-align: center;
+	line-height: 37px;
+	color: #F10215;
+}
+.jiarugouwu{
+	width: 70px;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+	font-size: 14px;
+	margin-top: 5px;
+	color: #F10215;
+	position: relative;
+}
+.jd_number{
+	position: absolute;
+	width: 17px;
+	height: 17px;
+	background:#F10215 ;
+	border-radius: 50%;
+	left: 70px;
+	top: 0px;
+	text-align: center;
+	line-height: 17px;
+	color: #fff;
+}
+
+.jd_nav02_and_pinpai{
+	width: 1000px;
+	height: 55px;
+	margin-top: 20px;
+	float: left;
+}
+.jd_nav02{
+	width: 700px;
+	height: 48px;
+	float: left;
+	margin-top: 7px;
+	margin-left: 20px;
+}
+.jd_nav02 ul{
+	width: 100%;
+	height: 100%;
+}
+.jd_nav02 ul li{
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	color: #555;
+}
+.jd_nav02 ul li a{
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 100%;
+	color: #555;
+	
+}
+.jd_nav02 ul li a:hover{
+	color: #EB3E2D;
+}
+
+.pinpai{
+	width: 200px;
+	float: right;
+	margin-top: 10px;
+}
+.shenquan{
+	position: relative;
+}
+.shen_img{
+	position: absolute;
+	width: 30px;
+	height: 20px;
+	top: -20px;
+	left: 40px;
+	
+}
+.shen_img img{
+	width: 30px;
+	height: 20px;
+}

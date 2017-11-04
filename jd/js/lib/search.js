@@ -21,7 +21,7 @@ function jsonp(url){
 
 
 var ind = -1, lis, len;
-input1.onkeyup = function(e){
+(input1).onkeyup = function(e){
 	lis = ol1.getElementsByTagName("li");
 	len = lis.length;
 	e = e || window.event;
