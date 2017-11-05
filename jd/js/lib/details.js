@@ -150,12 +150,86 @@ $(function(){
 		$(".allkid_chuizi").css("display","none")
 	})
 	
+	//放大镜
+	$("#bottom li").mouseenter(function(e){
+ 		var e = e || window.event;
+ 		//获取下标
+ 		var index = $(this).index();
+ 		$("#small img").eq(index).show().siblings().hide();
+ 		$("#big img").eq(index).show().siblings().hide();
+ 		
+ 	})
+	//当鼠标进入大图框，放大镜和右边的最大框显示
+ 	$("#small").mouseover(function(){
+ 		$("#mask").show()
+ 		$("#big").show()
+ 	})
+	
+	//当鼠标离开大图框，放大镜和右边最大框消失
+ 	$("#small").mouseout(function(){
+ 		$("#mask").hide()
+ 		$("#big").hide()
+ 	})
+	
+	//鼠标移动，放大镜跟着移动，右边的大框图片也要运动
+ 	$("#small").mousemove(function(e){
+ 		var e = e || window.event;
+ 		
+ 		var disx = e.pageX - $("#mask").width()/2 - $(".Magnifier_box").offset().left;
+ 		var disy = e.pageY - $("#mask").height()/2 - $(".Magnifier_box").offset().top;
+ 		
+ 		if(disx<0)disx=0;
+ 		if(disy<0)disy=0;
+ 		if(disx>$(".Magnifier_box").width()-$("#mask").width()){
+ 			disx=$(".Magnifier_box").width()-$("#mask").width()
+ 		}
+ 		if(disy>$(this).width()-$("#mask").width()){
+ 			disy=$(this).height()-$("#mask").height()
+ 		}
+ 		
+ 		$("#mask").css({
+ 			"left":disx,
+ 			"top":disy
+ 		})
+ 		
+ 		var bigImgx = disx * ($(".bigImage").width()/$("#mm").width());
+ 		var bigImgy = disy * ($(".bigImage").height()/$("#mm").height());
+ 		
+ 		
+ 		$(".bigImage").css({
+ 			"left":-bigImgx,
+ 			"top":-bigImgy
+ 		})
+ 		
+ 		
+ 	})
+ 	$(".glas_righ").mouseover(function(){
+ 		
+ 	})
+ 	
+ 	$(".glas_righ").click(function(){
+ 		$("#bottom").animate({"left":"-70px"})
+ 	})
+	$(".glas_lef").click(function(){
+ 		$("#bottom").animate({"left":"0px"})
+ 	})
+	
+	$("#bottom li").mouseover(function(){
+		$(this).css("border","1px solid red")
+	}).mouseleave(function(){
+		$(this).css("border","2px solid #fff")
+	})
 	
 	
 	
-	
-	
-	
+	///
+	$(".delis_main_right_top_05").mouseover(function(){
+		//$(this).css({"height":"240px"});
+		$(".right_top_05_02_yin").css("display","block")
+	}).mouseleave(function(){
+		//$(this).css({"height":"75px"});
+		$(".right_top_05_02_yin").css("display","none")
+	})
 	
 	
 })
