@@ -157,17 +157,17 @@
 /***********放大镜主体详情*/
 .delis_glase_box{
 	width: 100%;
-	height: 750px;
+	height: 650px;
 	float: left;
 }
 .delis_main{
 	width: 1190px;
-	height: 750px;
+	height: 650px;
 	margin: 0 auto;
 }
 .delis_main_left{
 	width: 470px;
-	height: 750px;
+	height: 650px;
 	float: left;
 }
 
@@ -325,9 +325,9 @@
 
 .delis_main_right{
 	width: 700px;
-	height:750px;
+	height:650px;
 	float:right;
-	background: pink;
+	background: #fff;
 }
 .delis_main_right_top_01{
 	width: 700px;
@@ -444,7 +444,6 @@
 	width:700px;
 	height: 45px;
 	float: left;
-	background: yellow;
 }
 .delis_main_right_top_06 span:nth-child(1){
 	float: left;
@@ -469,7 +468,6 @@
 	height: 40px;
 	line-height: 30px;
 	float: left;
-	border: 1px solid black;
 }
 .delis_main_right_top_07 span:nth-child(1){
 	float: left;
@@ -505,8 +503,10 @@
 	height: 250px;
 	float: left;
 	position: absolute;
-	background: yellow;
 	z-index: -1;
+	background: #fff;
+	border: 1px solid #333333;
+	display: none;
 }
 .tab_top{
 	width: 450px;
@@ -530,4 +530,329 @@
 	align-content: center;
 	padding-left: 15px;
 	line-height: 30px;
+	cursor: pointer;
 }
+.tab_bottom{
+	width: 470px;
+	height: 170px;
+	float: left;
+	margin-top: 20px;
+	top: 40px;
+	position: absolute;
+}
+.bot{
+	width: 470px;
+	height: 170px;
+	left: 0;
+	position: absolute;
+}
+.magin_tt{
+	margin-top: 20px;	
+}
+
+.bot ul{
+	width: 400px;
+	height:170px;
+	float: left;
+	margin-left: 20px;
+	
+}
+.bot ul li{
+	float: left;
+}
+.bot ul li a{
+	padding: 20px;
+}
+
+.delis_main_right_top_08{
+	width: 700px;
+	height: 60px;
+	float: left;
+}
+.select_ul{
+	width: 600px;
+	height: 50px;
+	float: left;
+	margin-left: 10px;
+}
+.select_ul li{
+	width: 150px;
+	height: 45px;
+	float: left;
+	margin-left: 10px;
+	background: #F7F7F7;
+	border: 1px solid #333333;
+}
+.select_ul li:hover{
+	border: 1px solid red;
+}
+.select_ul li a i{
+	width: 50px;
+	height: 40px;
+	float: left;
+	margin-top: 3px;
+}
+.select_ul li a span{
+	width: 80px;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.select_ul09 li{
+		width: 100px;
+}
+
+.delis_main_right_top_last{
+	width: 600px;
+	height: 60px;
+	float: left;
+	margin-left: 15px;
+}
+.number{
+	width: 80px;
+	height: 58px;
+	float: left;
+	border: 1px solid #ccc;
+}
+.number input{
+	width: 50px;
+	height: 57px;
+	float: left;
+	border: none;
+	font-size: 18px;
+	text-align: center;
+}
+.number a{
+	width:30px;
+	height: 29px;
+	float: left;
+	text-align: center;
+	font-size: 18px;
+	background: #ccc;
+	color: #fff;
+}
+
+.add_shopcar{
+	width: 150px;
+	height: 58px;
+	float: left;
+	margin-left: 20px;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	line-height: 58px;
+	background: #DF3033;
+	cursor: pointer;
+}
+.baitiao{
+	width: 120px;
+	background: #85C360;
+}
+
+/*********************/
+
+.jd_delist_main_box{
+	width: 100%;
+	height: 19870px;
+	float: left;
+}
+.jd_delist_main{
+	width: 1190px;
+	
+	margin: 0 auto;
+}
+.jd_delist_main_left{
+	width: 220px;
+	
+	float: left;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+.jd_delist_main_right{
+	width: 950px;
+	
+	float: right;
+	background: slateblue;
+}
+.delist_main_left_top01{
+	width: 218px;
+	height: 220px;
+	float: left;
+	border: 1px solid #ccc;
+}
+._left_top01_head{
+	width: 220px;
+	height: 42px;
+	background: #F7F7F7;
+	float: left;
+
+}
+._left_top01_head h4{
+	width: 180px;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 20px;
+	float: left;
+	margin-top: 10px;
+}
+._left_top01_head h4 a{
+	float: left;
+}
+._left_top01_head h4 a i{
+	width: 20px;
+	height: 20px;
+	float: right;
+	background: url(https://static.360buyimg.com/item/default/1.0.37/components/popbox/i/sprite-pop-im.gif) no-repeat;
+	margin: 5px;
+}
+.evaluation{
+	width: 200px;
+	height: 100px;
+	float: left;
+	background: #fff;
+	margin: 10px;
+}
+.span1{
+	width: 100px;
+	height: 100px;
+	float: left;
+	font-size: 30px;
+	text-align: center;
+	line-height: 100px;
+	color: red;
+	
+	
+}
+.evaluation ul{
+	width: 100px;
+	height: 100px;
+	float: right;
+	line-height: 20px;
+}
+.evaluation ul li:nth-child(1){
+	margin-top: 10px;
+}
+.go_store{
+	width: 80px;
+	height: 40px;
+	float: left;
+	border: 1px solid #ccc;
+	margin-left: 20px;
+	line-height: 40px;
+	background: #F8F8F8;
+}
+.go_store i{
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 5px;
+	background-image: url(//static.360buyimg.com/item/default/1.0.37/components/popbox/i/__sprite.png);
+    background-position: -34px 0;
+}
+
+.delist_main_left_top02 span{
+	height: 40px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 5px;
+	line-height: 40px;
+	font-size: 14px;
+	
+}
+#input_a{
+	width: 100px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+#input_b{
+	width: 40px;
+	float: left;
+	margin-top: 15px;
+	margin-left: 5px;
+}
+#input_c{
+	width: 30px;
+	margin-top: 15px;
+	margin-left: 5px;
+}
+button{
+	width: 80px;
+	height: 25px;
+	float: left;
+	text-align: center;
+	font-size: 16px!important;
+	margin-left: 50px!important;
+}
+
+.delist_main_left_top03{
+	height: 800px;
+}
+.delist_main_left_top03 ul{
+	height: 800px;
+}
+.delist_main_left_top03 ul li{
+	margin-left: 10px;
+	text-align: center;
+	
+}
+
+
+._main_right_01{
+	width: 950px;
+	height: 45px;
+	asdfloat: left;
+	background: #F7F7F7;
+	border-bottom: 1px solid #E4393C;
+}
+._main_right_01_ul{
+	width: 650px;
+	height: 45px;
+	float: left;
+	
+}
+._main_right_01_ul li{
+	width: 110px;
+	height: 40px;
+	float: left;
+	margin-top: 3px;
+	margin-left: 10px;
+}
+._main_right_01_ul li a{
+	width: 115px;
+	height: 40px;
+	text-align: center!important;
+	padding: 10px;
+	line-height: 45px;
+	color: #333333;
+	font-size: 16px;
+	
+}
+.selectedss{
+	background: #E4393C;
+}
+
+._main_right_02{
+	width: 950px;
+	asdfloat: left;
+	position: relative;
+	asdbackground: red;
+}
+.tabl_div1{
+	position: absolute;
+	width: 950px;
+	font-size: 30px;
+	
+}
+.tab_one img{
+	width: 950px;
+}
+
+.footeer_box{
+	width: 100%;
+	height: 500px;
+	float: left;
+}
+

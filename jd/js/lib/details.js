@@ -1,6 +1,6 @@
 $(function(){
 	//头部 分离引入
-	$(".details_head").load("./head.html .jd_nav_main",function(){
+	$(".list_head").load("./head.html .jd_nav_main",function(){
 		
 			//城市
 			$(".city").mouseenter(function(){
@@ -60,7 +60,7 @@ $(function(){
 			})
 	})
 	//logo_search  fen	
-	$(".details_logo_search").load("./logo_search.html .logo_search_f",function(){
+	$(".list_search").load("./logo_search.html .logo_search_f",function(){
 				
 		/******搜索************/
 		/**
@@ -84,7 +84,7 @@ $(function(){
 		
 		var ind = -1, lis, len;
 		input1.onkeyup = function(e){
-			lis = ol1.getElementsByTagName("li");
+			lis =ol1.getElementsByTagName("li");
 			len = lis.length;
 			e = e || window.event;
 			var code = e.which || e.keyCode;
@@ -230,6 +230,72 @@ $(function(){
 		//$(this).css({"height":"75px"});
 		$(".right_top_05_02_yin").css("display","none")
 	})
+	
+	
+	$(".btn").click(function(){
+		$(this).addClass("magin_tt").siblings().removeClass("magin_tt")
+		$(".bot").eq($(this).index()).show().siblings().hide()
+	})
+	
+	
+	$(".table").mouseenter(function(){
+		
+		$(".citys_alls").show()
+	}).mouseleave(function(){
+		$(".citys_alls").hide()
+	})
+	
+	$(".select_ul li").click(function(){
+		$(this).css("border","1px solid red")
+	})
+	
+	
+	
+	//
+	$(".num_add").click(function(){
+		var num = $(".input_num").val();
+		num++;
+		$(".input_num").val(num)
+	})
+	
+	$(".num_reduce").click(function(){
+		var num = $(".input_num").val();
+		num--;
+		if(num<1){
+			num=1;
+		}
+		$(".input_num").val(num)
+	})
+	
+	$("._main_right_01_ul li").click(function(){
+		$(this).addClass("selectedss").siblings().removeClass("selectedss")
+		$(".tabl_div1").eq($(this).index()).show().siblings().hide()
+	})
+	
+	
+	
+	
+	
+	$(".footeer_box").load("./foot.html .fot",function(){})
+	
+	$(window).scroll(function(){
+		if($(this).scrollTop()>920){
+			$("._main_right_01").css({"position":"fixed","top":0,"z-index":8888})
+		}else{
+			$("._main_right_01").css({"position":"static"})
+		}
+	})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 })

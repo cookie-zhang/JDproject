@@ -1,0 +1,297 @@
+.list_head{
+	width: 100%;
+	height: 37px;
+	background: #E3E4E5;
+}
+.list_search{
+	width: 100%;
+	height: 178px;
+}
+
+
+/*
+*/
+
+.list_top01_box{
+	width: 100%;
+	height: 220px;
+	float: left;
+	border-top: 2px solid red;
+}
+.list_top01_main{
+	width: 1400px;
+	height: 200px;
+	margin: 0 auto;
+	background: #F1F1F1;
+	position: relative;
+}
+.list_top01_left{
+	width: 40px;
+	height: 110px;
+	left: 30px;
+	position: absolute;
+	background: url(https://misc.360buyimg.com/product/list/1.0.7/css/i/list.icons.other.png) no-repeat;
+}
+.list_top01_center{
+	width: 970px;
+	height: 150px;
+	float: left;
+	margin-left: 170px;
+	margin-top: 20px;
+}
+.list_top01_center_ul{
+	width: 970px;
+	height: 150px;
+	
+}
+.list_top01_center_ul li{
+	width: 280px;
+	height: 150px;
+	float: left;
+	margin-left: 30px;
+	background: #fff;
+}
+.list_top01_center_ul li a:nth-child(1){
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-top: 15px;
+}
+.list_top01_center_ul li a:nth-child(2){
+	width: 180px;
+	height: 55px;
+	float: right;
+	margin-top: 20px;
+	
+}
+.list_top01_center_ul li a:nth-child(2):hover{
+	color: red;
+}
+.list_top01_right{
+	width: 40px;
+	height: 110px;
+	right: 200px;
+	position: absolute;
+	background: url(https://misc.360buyimg.com/product/list/1.0.7/css/i/list.icons.other.png) no-repeat;
+}
+.list_top01_ol{
+	width: 200px;
+	height: 160px;
+	position: absolute;
+	right: 0px;
+	top: 15px;
+}
+.list_top01_ol li{
+	line-height: 30px;
+}
+.list_top02_box{
+	width: 100%;
+	height: 65px;
+	float: left;
+}
+.list_top02_main{
+	width: 1400px;
+	height: 65px;
+	margin: 0 auto;
+	background: pink;
+}
+.list_top02_phone{
+	width: 65px;
+	height: 38px;
+	float: left;
+	margin-top: 15px;
+	text-align: center;
+	line-height: 38px;
+	font-size: 20px;
+	font-weight: 600;
+}
+.list_top02_phone a{
+	text-align: center;
+	font-size: 20px;
+}
+.list_top02_phone a:hover{
+	color: red;
+}
+.list_top02_main ul{
+	width: 450px;
+	height: 50px;
+	float: left;
+	margin-top: 15px;
+}
+.list_top02_main ul li a{
+	width: 100px;
+	height: 30px;
+	float: left;
+	margin-top: 8px;
+	margin-left: 10px;	
+	border: 1px solid #333333;
+	position: relative;
+	text-align: center;
+	line-height: 30px;
+}
+
+.list_top02_main ul li a i{
+	display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+    background: url(//misc.360buyimg.com/product/list/1.0.7/css/i/search.ele.png) no-repeat 4px 7px;
+    transition: background-position .15s ease-in-out;
+    margin-top: 5px;
+}
+.list_top02_main ul li a i:hover{
+	
+}
+
+
+.list_all_pic_box{
+	width: 100%;
+	background: yellow;
+	margin-top: 500px;
+}
+.list_all_pic_main{
+	width: 1400px;
+	margin: 0 auto;
+	background: pink;
+}
+.list_all_pic_main_left{
+	width: 250px;
+	height: 2000px;
+	float: left;
+	background: blue;
+}
+.list_all_pic_main_right{
+	width: 1100px;
+	height: 2000px;
+	float: right;
+	background: deepskyblue;
+}
+
+.list_allpic_ul{
+	width: 1100px;
+	height: 2000px;
+	float: left;
+	background: blueviolet;
+}
+.list_allpic_ul li{
+	width: 234px;
+	height: 406px;
+	float: left;
+	margin-left: 10px;
+	background: #fff;
+}
+/*.list_allpic_ul li a{
+	width: 250px;
+	height: 250px;
+	float: left;
+}
+*/
+
+.div_bigImg{
+	width: 220px;
+	height: 220px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 7px;
+	position: relative;
+}
+.div_bigImg a{
+	position: relative;
+}
+
+.div_bigImg a img{
+	position: absolute;
+}
+
+.div_smllImg{
+	width: 220px;
+	height: 43px;
+	float: left;
+	margin-left: 7px;
+	overflow: hidden;
+}
+.div_smllImg_ul{
+	height: 43px;
+	margin-top: 5px;
+}
+
+.div_smllImg_ul li{
+	width: 26px;
+	height: 26px;
+	border: 2px solid #ccc;
+	float: left;
+	margin-left: 5px;
+	text-align: center;
+	line-height: 27px;
+}
+.div_smllImg_ul li:hover{
+	border: 2px solid red;	
+}
+
+.price{
+	width: 220px;
+	height: 30px;
+	float: left;
+	margin-left: 7px;
+	color: red;
+	font-size:20px ;
+}
+.price i{
+	font-style: normal;
+	font-size: 16px;
+}
+.content{
+	width: 220px;
+	height: 18px;
+	float: left;
+	margin-left: 7px;
+	
+	overflow: hidden;
+}
+.content a{
+	font-size: 12px;
+}
+.content a:hover{
+	color: red;
+}
+
+.neicui_gb{
+	width: 220px;
+	height: 20px;
+	float: left;
+	margin-left: 7px;
+	margin-top: 5px;
+}
+.neicui_gb a{
+	
+	width: 70px;
+	height:20px;
+	float: left;
+	color: #fff;
+	margin-left: 2px;
+	background: #ccc;
+}
+.pingjia{
+	width: 220px;
+	height: 20px;
+	float: left;
+	margin-left: 7px;
+	margin-top: 5px;
+	color: #ccc;
+}
+.ziying{
+	width:220px;
+	height: 20px;
+	float: left;
+	margin-top: 5px;
+	margin-left: 7px;
+}
+.ziying a {
+	float: left;
+}
+.ziying a i{
+	width: 16px;
+	height: 16px;
+	float: right;
+	background: url(https://misc.360buyimg.com/product/list/1.0.7/css/i/bg-im@1x.png);
+}
