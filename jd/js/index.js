@@ -38,7 +38,12 @@ $(function(){
 				}
 				
 			});
-			
+				
+				
+				//用户名加载到主页
+				var str = JSON.parse($.cookie("conten"))
+				$(".login a").html(str.user)
+				$(".hello p span").html(str.user)
 		
 			//我的京东
 			$(".my_jd_par").mouseenter(function(){

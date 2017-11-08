@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<div class="register_head_box">
+			<div class="register_head_main">
+				<div class="register_logo"></div>
+				<div class="register_freed">欢迎注册</div>
+				<div class="register_login_box">
+				</div>
+			</div>
+		</div>
+		<div class="zhuyi">依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版《京东隐私政策》已上线，将更有利于保护您的个人隐私。</div>
+		
+		<div class="login_main_box">
+			<div class="login_main">
+				<div class="saoma_box">
+					<p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
+					<div class="top_01">
+						<a class="a_01">扫码登录</a>
+						<a class="a_02">账号登录</a>
+					</div>
+					<div class="top_02">
+						<div class="login_div_input1">
+							<span></span>
+							<input type="text" placeholder="请输入手机号" value="" id="login_Phone"/>
+						</div>
+						<div class="login_div_input2">
+							<span></span>
+							<input type="password" placeholder="密码" value="" id="login_Pwd"/>
+						</div>
+						<p>忘记密码？</p>
+						
+						<button class="login_btn">登录</button>
+					</div>
+					
+					<div class="top_03">
+						<a>立即注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="zhu_fot_box">
+			<div class="zhu_fot_main">
+				<ul>
+					<li><a href="javascript:;">关于我们</a></li>
+					<li><a href="javascript:;">联系我们</a></li>
+					<li><a href="javascript:;">人才招聘</a></li>
+					<li><a href="javascript:;">商家入驻</a></li>
+					<li><a href="javascript:;">广告服务</a></li>
+					<li><a href="javascript:;">手机京东</a></li>
+					<li><a href="javascript:;">友情链接</a></li>
+					<li><a href="javascript:;">销售联盟</a></li>
+					<li><a href="javascript:;">京东社区</a></li>
+					<li><a href="javascript:;">京东公益</a></li>
+					<li><a href="javascript:;">English Site</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+<script type="text/javascript" src="js/lib/register.js" ></script>
+<script>
+	
+	
+		var loginobj = JSON.parse($.cookie("conten"))//转化为对象
+		
+		$(".login_btn").click(function(){
+			console.log($.cookie("conten"))
+			
+			var numbe=$("#login_Phone").val();
+			var pass=$("#login_Pwd").val();
+			
+			
+			var loginobj = JSON.parse($.cookie("conten"))
+			
+			
+			
+			if(loginobj.name==numbe && loginobj.pwd==pass){
+				alert("登陆成功")
+				self.location='index.html'; 
+			}else{
+				alert("电话号码不存在或密码错误");
+				 !loginobj[numbe]
+				
+			}
+		})
+	
+	
+</script>

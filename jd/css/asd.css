@@ -1,0 +1,38 @@
+.register_head_box{
+	width: 100%;
+	height: 110px;
+	float: left;
+	box-shadow: 2px 5px 20px #888;;
+}
+.register_head_main{
+	width: 1500px;
+	height: 110px;
+	margin: 0 auto;
+}
+
+.register_logo{
+	width: 200px;
+	height: 80px;
+	background: url(https://misc.360buyimg.com/lib/img/e/logo-201305-b.png) no-repeat;
+	float: left;
+	margin-top: 20px;
+}
+.register_freed{
+	width: 200px;
+	height:50px;
+	float: left;
+	text-align: center;
+	font-size: 35px;
+	margin-top: 37px;
+}
+.zhuyi{
+	width: 100%;
+	height: 30px;
+	float: left;
+	text-align: center;
+	font-size: 14px;
+	line-height: 30px;
+	background: #FFF8F0;
+}
+.login_main_box{
+}

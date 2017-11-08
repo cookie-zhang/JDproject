@@ -1,7 +1,6 @@
 
 $(function(){
 	
-
 	//头部 分离引入
 	$(".list_head").load("./head.html .jd_nav_main",function(){
 		
@@ -139,86 +138,240 @@ $(function(){
 			this.value=" ";
 		}
 	})
-	
-	
-
-		//列表页  ajax
-		$.ajax({
-			type:"get",
-			url:"data/list_shopping.json",
-			success:function(json){
-				var str = "";
-				for(var i=0;i<json.length;i++){
-					
-					str+=`
-					
-						<li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//列表页  ajax
+var def=$.ajax({
+	type:"get",
+	url:"data/list_shopping.json",
+});
+def.done(function(json){
+	//console.log(json)
+	//总页数
+	pageCount =Math.ceil( json.length / 40 );
+	//显示第一页的数据
+	var index = 1;
+	var html="";
+	 for( var i = (index-1)*40 ; i < index*40 ; i++ ){
+		if(i<json.length){
+			
+			
+			/*$(".list_allpic_ul").append(*/
+			html+=`
+	        			<li>
 							<div class="div_bigImg">
-								<a href="javascript:;">
-									<img src="${json[i]}" />
-									<img src="" />
-									<img src="" />
-									<img src="" />
-									<img src="" />
+								<a class="div_bigImg_a" href="details.html?list_Id=${json[i].id}">
+								
 								</a>
 							</div>
 							<div class="div_smllImg">
 								<ul class="div_smllImg_ul">
-									<li>
-										<a href="javascript:;">
-											<img src=""/>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-											<img src=""/>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-											<img src=""/>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-											<img src=""/>
-										</a>
-									</li>
-									<li>
-										<a href="javascript:;">
-											<img src=""/>
-										</a>
-									</li>
+								
 								</ul>
 							</div>
-							
-							<p class="price"><i>￥</i>146.00</p>
-							<p class="content"><a href="javascript:;">华为 畅享6 蓝色 移动联通电信4G手机 双卡双待</a></p>
+							<p class="price"><i>￥</i>${json[i].pirce}</p>
+							<p class="content"><a href="javascript:;"> ${json[i].content}</a></p>
 							<span class="neicui_gb">
-								<a href="javascript:;">5.0-4.6英寸</a>
-								<a href="javascript:;">5.0-4.6英寸</a>
-								<a href="javascript:;">5.0-4.6英寸</a>
+								
+							
 							</span>
 							<p class="pingjia">已有35万+人评价</p>
 							<p class="ziying"><a href="javascript:;">华为京东自营官方旗舰店....<i></i> </a> </p>
-							
 						</li>
-					
-					
-					
-					`
-					
-					//<!--小图是不是可以在ajax里面再一次循环-->
-					//		<!--<a>
-					//			<img src="https://img11.360buyimg.com/n7/jfs/t3637/275/652996370/280419/2a134044/58105e15N75fb0595.jpg" />
-					//		</a>-->
-				}
-				
-				$(".div_smllImg_ul li").mouseover(function(){
-					$(this)
-				})
+				`
+			/*)*/
+			
+		}
+	}	
+	
+	$(".list_allpic_ul").html(html)
+	
+	
+	
+	
+	
+	
+	
+	//foreach方法
+	/*json.forEach(function(str,i){
+		console.log(str)
+		//console.log(i)
+		$(".list_allpic_ul").append(
+			`
+        			<li>
+						<div class="div_bigImg">
+							<a class="div_bigImg_a" href="details.html?list_Id=${str.id}">
+							
+							</a>
+						</div>
+						<div class="div_smllImg">
+							<ul class="div_smllImg_ul">
+							
+							</ul>
+						</div>
+						<p class="price"><i>￥</i>${str.pirce}</p>
+						<p class="content"><a href="javascript:;"> ${str.content}</a></p>
+						<span class="neicui_gb">
+							
+						
+						</span>
+						<p class="pingjia">已有35万+人评价</p>
+						<p class="ziying"><a href="javascript:;">华为京东自营官方旗舰店....<i></i> </a> </p>
+					</li>
+			`
+		)
+	})*/
+	var n=json.length;
+		for(let i=0; i<n; i++ ){
+			for(var j of json[i].smalImg){
+				$(".div_smllImg_ul").eq(i).append(`
+					<li class="ppp">
+						<img src="${j}" alt="" />
+					</li>	
+				`)
 			}
-		});
+		}
+		for(let i=0; i<n; i++ ){
+			//console.log(json[i].bigImg)
+			for(var j of json[i].bigImg){
+				$(".div_bigImg_a").eq(i).append(`
+						<img src="${j}"/>
+				`)
+			}
+		}
+		
+		for(let i=0; i<n; i++ ){
+			//console.log(json[i].size)
+			for(var j of json[i].size){
+				$(".neicui_gb").eq(i).append(`
+						<a href="javascript:;"> ${j}</a>
+						
+				`)
+			}
+		}
+		//鼠标小图滑过显示大图
+		$(".div_smllImg_ul li").mouseover(function(){
+    			
+    			$(this).parent().parent().prev().find("img").eq( $(this).index() ).show().siblings().hide()
+		})
+		
+		
+		
+		//分页请求
+        $(".M-box").pagination({
+			pageCount :pageCount,
+			callback:function(api){
+		        var data = {
+		            page: api.getCurrent()//获取当前页
+		        };
+		        $.getJSON('data/list_shopping.json',function(json){
+		            var index = data.page;
+		            var str="";
+			            for( var i = (index-1)*40 ; i < index*40 ; i++ ){
+							if(i<json.length){					
+								/*$(".list_allpic_ul").append(*/
+								str+=`
+						        			<li>
+												<div class="div_bigImg">
+													<a class="div_bigImg_a" href="details.html?list_Id=${json[i].id}">
+													
+													</a>
+												</div>
+												<div class="div_smllImg">
+													<ul class="div_smllImg_ul">
+													
+													</ul>
+												</div>
+												<p class="price"><i>￥</i>${json[i].pirce}</p>
+												<p class="content"><a href="javascript:;"> ${json[i].content}</a></p>
+												<span class="neicui_gb">
+												</span>
+												<p class="pingjia">已有35万+人评价</p>
+												<p class="ziying"><a href="javascript:;">华为京东自营官方旗舰店....<i></i> </a> </p>
+											</li>
+									`
+								/*)*/
+								
+							}
+						}	
+						
+						$(".list_allpic_ul").html(str)
+		            
+		            var n=json.length;
+						for(let i=0; i<n; i++ ){
+							for(var j of json[i].smalImg){
+								$(".div_smllImg_ul").eq(i).append(`
+									<li class="ppp">
+										<img src="${j}" alt="" />
+									</li>	
+								`)
+							}
+						}
+						for(let i=0; i<n; i++ ){
+							//console.log(json[i].bigImg)
+							for(var j of json[i].bigImg){
+								$(".div_bigImg_a").eq(i).append(`
+										<img src="${j}"/>
+								`)
+							}
+						}
+						
+						for(let i=0; i<n; i++ ){
+							//console.log(json[i].size)
+							for(var j of json[i].size){
+								$(".neicui_gb").eq(i).append(`
+										<a href="javascript:;"> ${j}</a>
+										
+								`)
+							}
+						}
+		            
+		            
+		            //鼠标小图滑过显示大图
+		$(".div_smllImg_ul li").mouseover(function(){
+    			
+    			$(this).parent().parent().prev().find("img").eq( $(this).index() ).show().siblings().hide()
+		})
+		            
+		            
+
+		            
+		            
+		        });
+		    }
+		})
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*//鼠标小图滑过显示大图
+		$(".div_smllImg_ul li").mouseover(function(){
+    			
+    			$(this).parent().parent().prev().find("img").eq( $(this).index() ).show().siblings().hide()
+		})*/
+})	
+	
 
 
 
@@ -235,6 +388,13 @@ $(function(){
 
 
 
+
+
+
+
+
+
+		$(".list_foot").load("./foot.html .fot")
 
 
 

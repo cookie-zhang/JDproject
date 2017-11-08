@@ -1,0 +1,236 @@
+.register_head_box{
+	width: 100%;
+	height: 110px;
+	float: left;
+	box-shadow: 2px 5px 20px #888;;
+}
+.register_head_main{
+	width: 1200px;
+	height: 110px;
+	margin: 0 auto;
+}
+
+.register_logo{
+	width: 200px;
+	height: 80px;
+	background: url(https://misc.360buyimg.com/lib/img/e/logo-201305-b.png) no-repeat;
+	float: left;
+	margin-top: 20px;
+}
+.register_freed{
+	width: 200px;
+	height:50px;
+	float: left;
+	text-align: center;
+	font-size: 35px;
+	margin-top: 37px;
+}
+.register_login_box{
+	width: 250px;
+	height: 50px;
+	float: right;
+	margin-top: 45px;
+	
+}
+.register_login_box span{
+	width: 120px;
+	height: 30px;
+	float: left;
+	margin-top: 10px;
+	font-size: 18px;
+	color: #ccc;
+	
+}
+.register_login_box a{
+	width: 110px;
+	height: 30px;
+	float: right;
+	font-size:18px ;
+	margin-top: 10px;
+	
+}
+.register_login_box a:hover{
+	text-decoration:underline;
+}
+.register_center_box{
+	width: 100%;
+	height: 900px;
+	float: left;
+	margin-top: 10px;
+}
+.register_center{
+	width: 1500px;
+	height: 900px;
+	margin: 0 auto;
+}
+.clear{
+	width: 100%;
+	height: 900px;
+}
+
+.register_center_left{
+	width: 600px;
+	height: 800px;
+	float: left;
+	margin-top: 60px;
+	margin-left: 150px;
+}
+.register_center_right{
+	width: 500px;
+	height: 800px;
+	float: right;
+	margin-top: 60px;
+	margin-right: 120px;
+	border-left: 1px solid #C7C7C7;
+}
+
+.factry{
+	width: 220px;
+	height: 80px;
+	float: left;
+	margin-top:15px;
+	border-bottom: 1px solid #ccc;
+	margin-left: 110px;
+}
+.factry i{
+	width: 45px;
+	height: 42px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	background: url(https://misc.360buyimg.com/user/reg/1.0.0/css/i/icon.png);
+	background-position:0 -50px;
+}
+.factry a {
+	width: 150px;
+	height: 30px;
+	float: left;
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+.earch{
+	width: 200px;
+	height: 50px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 120px;
+
+}
+
+.earch i{
+	width: 45px;
+	height: 50px;
+	float: left;
+	margin-top: 10px;
+	background: url(https://misc.360buyimg.com/user/reg/1.0.0/css/i/icon.png);
+	background-position: -50px -50px;
+}
+.earch a{
+	font-size: 16px;
+}
+
+.div_user01,.div_user02,.div_user03,.div_user04,.div_user05,.div_user06{
+	width:500px;
+	height: 70px;
+	border: 1px solid #ccc;
+	margin-left: 50px;
+	float: left;
+	margin-top: 10px;
+}
+.tishi01,.tishi02,.tishi03,.tishi04,.tishi05,.tishi06{
+	width:500px;
+	height: 30px;
+	margin-left: 50px;
+	float: left;
+	font-size: 14px;
+	margin-top: 5px;
+}
+button{
+	width:500px;
+	height:70px;
+	float: left;
+	font-size: 20px;
+	margin-left: 50px;
+	margin-top: 15px;
+	color: #fff;
+	background: #EE2222;
+	border: none;
+}
+.user_words{
+	width: 130px;
+	height: 70px;
+	float: left;
+	color: #323232;
+	font-size: 20px;
+	text-align: center;
+	line-height: 70px;
+}
+
+.register_center_left input{
+	width: 300px;
+	height: 50px;
+	margin-top: 10px;
+	font-size: 20px;
+	color: #ccc;
+	outline: none;
+	border: none;
+}
+.pheVer_input6{
+	width: 230px!important;
+}
+.yanzheng{
+	width: 120px;
+	height: 50px;
+	float: right;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*foot*/
+.zhu_fot_box{
+	width: 100%;
+	height: 170px;
+	float: left;
+}
+.zhu_fot_main{
+	width: 1500px;
+	height: 170px;
+	margin: 0 auto;
+	border-top: 1px solid #ccc;
+	text-align: center;
+}
+.zhu_fot_main ul{
+	margin-left: 200px;
+	margin-top: 20px;
+}
+.zhu_fot_main li{
+	float: left;
+}
+.zhu_fot_main li a{
+	font-size: 14px;
+	
+	padding:10px 20px;
+	
+}
+
+.zhu_fot_main li a:hover{
+	color: red;
+}
