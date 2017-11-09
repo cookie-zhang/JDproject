@@ -198,7 +198,7 @@ $(function(){
 		$(".jd_lb_box_ul li").eq(i).fadeIn(300).siblings().fadeOut()	
 	}
 	
-	$(".jd_lb_box_ul").hover(function(){
+	$(".jd_lb_box").hover(function(){
 		$(".left").show();
 		$(".right").show();
 		clearInterval(timer);
@@ -570,7 +570,7 @@ $(function(){
 	
 	
 	
-	//头部分离  请求头部
+	
 	$(".footer_box").load("foot.html .fot")
 	
 	

@@ -580,7 +580,11 @@
 .all_menu_kind01{
 	left: 192px;
 	top: -10px;
+	
 	display: none;
+}
+.all_menu_kind01 a{
+	font-size: 30px!important;
 }
 .all_menu_kind02{
 	left: 192px;
